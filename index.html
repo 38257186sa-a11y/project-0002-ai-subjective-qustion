@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Quiz Hub — Daily Question Bank</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>AI Quiz Hub</h1>
+      <div class="small">Daily-refreshing open-book and MCQ generator. Local-first. Optional AI (DeepSeek).</div>
+    </header>
+
+    <div class="controls">
+      <label>Topic
+        <select id="topicSelect">
+          <option value="political_science">Political Science (UGC NET)</option>
+          <option value="ssc_history">SSC - History</option>
+          <option value="history">History</option>
+          <option value="world_history">World History</option>
+          <option value="languages" selected>Languages</option>
+          <option value="mixed">Mixed</option>
+        </select>
+      </label>
+
+      <label>Mode
+        <select id="modeSelect">
+          <option value="local">Local (No AI)</option>
+          <option value="deepseek" selected>DeepSeek (requires serverless)</option>
+        </select>
+      </label>
+
+      <button class="btn" id="generateBtn">Generate Today's Set</button>
+      <button id="regenerateBtn" class="btn alt">Regenerate</button>
+      <button id="saveBtn" class="btn alt">Save Locally</button>
+      <button id="downloadBtn" class="btn alt">Download JSON</button>
+    </div>
+
+    <div class="main">
+      <div class="left">
+        <div class="card">
+          <div class="meta">Date: <span id="dateDisplay"></span> • Seed: <span id="seedDisplay"></span></div>
+          <h2>Daily Module</h2>
+          <div id="questionArea" class="questionArea">
+            <div class="small">Click <strong>Generate Today's Set</strong> to start.</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Logs</h3>
+          <div class="log" id="logArea"></div>
+        </div>
+      </div>
+
+      <aside class="right">
+        <div class="card">
+          <h3>Settings</h3>
+          <label>Essays <input id="essayCount" type="number" min="1" max="3" value="1" /></label>
+          <label>Comprehension <input id="compCount" type="number" min="5" max="15" value="10" /></label>
+          <label>MCQs <input id="mcqCount" type="number" min="1" max="5" value="2" /></label>
+          <hr />
+          <div class="small">Serverless endpoint for DeepSeek: <code>/.netlify/functions/deepseek</code></div>
+        </div>
+
+        <div class="card">
+          <h4>Quick Tips</h4>
+          <div class="small">1) For DeepSeek mode to work locally use <code>netlify dev</code> with <code>.env</code> set. 2) In production add <code>DEEPSEEK_API_KEY</code> to Netlify site environment variables.</div>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="footer">© AI Quiz Hub — Use DeepSeek safely via serverless function.</footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
