@@ -1,0 +1,14 @@
+{
+  "name": "ai-quiz-hub",
+  "version": "1.0.0",
+  "description": "AI Quiz Hub — local + DeepSeek serverless",
+  "type": "module",
+  "scripts": {
+    "start": "netlify dev",
+    "build": "echo 'No build step required'"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "dotenv": "^16.4.5"
+  }
+}
