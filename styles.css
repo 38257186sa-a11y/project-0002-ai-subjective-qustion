@@ -1,0 +1,21 @@
+:root{--bg:#0f1724;--card:#0b1220;--muted:#94a3b8;--accent:#06b6d4;--glass:rgba(255,255,255,0.03)}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial}
+body{background:linear-gradient(180deg,#071426,#061122);color:#e6eef6;padding:18px}
+.app{max-width:1100px;margin:18px auto;background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+header h1{margin:0;font-size:22px}
+.controls{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;align-items:center}
+select,input,button{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px;border-radius:8px;color:inherit}
+button.btn{cursor:pointer;padding:8px 12px;border-radius:8px;background:linear-gradient(90deg,var(--accent),#7c3aed);border:none;color:white}
+button.alt{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+.main{display:flex;gap:12px;margin-top:14px}
+.left{flex:1}
+.right{width:360px}
+.card{background:var(--glass);padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);margin-bottom:12px}
+.meta{font-size:12px;color:var(--muted)}
+.small{font-size:13px;color:var(--muted)}
+.questionArea{min-height:220px}
+.mcq{margin-top:8px}
+label{display:block;font-size:13px;margin-top:8px}
+.footer{margin-top:12px;font-size:12px;color:var(--muted)}
+.log{height:160px;overflow:auto;background:rgba(0,0,0,0.12);padding:8px;border-radius:8px;font-family:monospace;font-size:12px}
+pre {white-space:pre-wrap;word-break:break-word}
